@@ -20,6 +20,9 @@
     {%- endcapture -%}
     {%- assign pageTitle = libdocConfig.blogTitle | append: extendedTitle -%}
     {%- assign pageDescription = libdocConfig.blogDescription -%}
+    {%- if pagePathUrl[2] != null -%}
+        {%- assign pageDescription = description -%}
+    {%- endif -%}
     {%- assign pageAuthor = libdocConfig.blogAuthor -%}
 {%- endif -%}
 
