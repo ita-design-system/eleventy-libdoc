@@ -309,6 +309,14 @@ main > ol:not(:has(ul)) li > ol > li {
     border-left-width: 1px;
     border-left-style: dashed;
 }
+main > ul li > p:first-child,
+main > ol li > p:first-child {
+    margin-top: 0;
+}
+main > ul li > p:last-child,
+main > ol li > p:last-child {
+    margin-bottom: 0;
+}
 /* 
 https://www.joshwcomeau.com/css/styling-ordered-lists-with-css-counters/
 */
