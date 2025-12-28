@@ -36,13 +36,16 @@ export default {
         return aRet.join('');
     },
     slugify: function(str) {
-        // https://dev.to/bybydev/how-to-slugify-a-string-in-javascript-4o9n
-        str = str.replace(/^\s+|\s+$/g, ''); // trim leading/trailing white space
-        str = str.toLowerCase(); // convert string to lowercase
-        str = str.replace(/[^a-z0-9 -]/g, '') // remove any non-alphanumeric characters
-                    .replace(/\s+/g, '-') // replace spaces with hyphens
-                    .replace(/-+/g, '-'); // remove consecutive hyphens
-        return str;
+        // https://jasonwatmore.com/vanilla-js-slugify-a-string-in-javascript
+        // make lower case and trim
+        let slug = str.toLowerCase().trim();
+        // remove accents from charaters
+        slug = slug.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        // replace invalid chars with spaces
+        slug = slug.replace(/[^a-z0-9\s-]/g, ' ').trim();
+        // replace multiple spaces or hyphens with a single hyphen
+        slug = slug.replace(/[\s-]+/g, '-');
+        return slug;
     },
     extractHtmlTagsFromString: function(string, htmlTagsListArray) {
         // https://stackoverflow.com/a/65725198
