@@ -76,6 +76,8 @@ export default {
                         slugifiedId += `-${i}`;
                     }
                     anchorsIds.push(slugifiedId);
+                    const invalidFirstCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+                    if (invalidFirstCharacters.includes(slugifiedId[0])) slugifiedId = 'a_' + slugifiedId;
                     const markup = `
                         <${m1} id="${slugifiedId}" pl-9="xs,sm">
                             <a  href="#${slugifiedId}"
@@ -154,10 +156,12 @@ export default {
                         slugifiedId += `-${tagIndex}`;
                     }
                     anchorsIds.push(slugifiedId);
+                    const invalidFirstCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+                    if (invalidFirstCharacters.includes(slugifiedId[0])) slugifiedId = 'a_' + slugifiedId;
                     tocMarkup += `
                         <li class="d-flex">
                             <a  href="#${slugifiedId}"
-                                class="pl-5 pt-1 pb-1 | fs-4 lsp-3 lh-5 fvs-wght-400 | blwidth-1 blstyle-dashed bcolor-neutral-500">
+                                class="pl-5 pt-1 pb-1 | fs-4 lsp-3 lh-5 fvs-wght-400 wb-break-word | blwidth-1 blstyle-dashed bcolor-neutral-500">
                                 ${htmlTag.value}
                             </a>
                         </li>`;
