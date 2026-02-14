@@ -44,5 +44,6 @@ export default {
     editThisPageRootUrl: userConfig.editThisPageRootUrl ?? false,
     imgBgColorLightMode: userConfig.imgBgColorLightMode ?? "transparent",
     imgBgColorDarkMode: userConfig.imgBgColorDarkMode ?? "transparent",
-    productionUrl: userConfig.productionUrl ?? ""
+    productionUrl: userConfig.productionUrl ?? "",
+    ogImageUrlForEachTag: userConfig.ogImageUrlForEachTag ?? {}
 };
