@@ -7,7 +7,6 @@
 {%- assign pageOgImageUrl = ogImageUrl | default: libdocConfig.ogImageUrl -%}
 {%- assign editThisPageRootUrl = libdocConfig.editThisPageRootUrl | default: '' -%}
 {%- assign editThisPageUrl = editThisPageRootUrl | append: page.inputPath | replace: "/./", "/" | replace: "./", "/" -%}
-
 {%- comment -%} {%- assign blogPathUrl = '/' | append: libdocConfig.blogSlug | append: '/' -%} {%- endcomment -%}
 {%- assign pagePathUrl = page.url | split: '/' -%}
 {%- if pagePathUrl[1] == libdocConfig.blogSlug -%}
@@ -97,6 +96,10 @@
 {%- assign headerMargin = 'mb-7' -%}
 {%- if pageUrlSplit[1] == 'tags' -%}
     {%- assign headerMargin = '' -%}
+    {% comment %} Tag page {% endcomment %}
+    {%- if libdocConfig.ogImageUrlForEachTag[pageUrlSplit[2]] != null %}
+        {%- assign pageOgImageUrl = libdocConfig.ogImageUrlForEachTag[pageUrlSplit[2]] -%}
+    {%- endif -%}
 {%- endif -%}
 {%- if pageUrlSplit[1] == libdocConfig.blogSlug and pageUrlSplit[2] == null -%}
     {%- assign headerMargin = '' -%}
