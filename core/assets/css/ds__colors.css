@@ -161,7 +161,7 @@ main table tbody tr:nth-child(even) td {
     background-color: var(--ita-colors-primary-100);
 }
 main table td code {
-    background-color: var(--ita-colors-primary-300);
+    background-color: var(--ita-colors-neutral-200);
     color: var(--ita-colors-primary-900);
 }
 /* QUOTES */

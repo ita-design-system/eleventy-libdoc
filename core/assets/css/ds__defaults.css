@@ -234,10 +234,17 @@ main a[aria-current="page"] {
 }
 main a[href^="https://"]:not([href^="https://eleventy-libdoc"])::after,
 main a.__external-link::after {
-    content: '\e900';
-    font-family: icomoon;
-    text-decoration: none;
+    content: '';
+    background-color: currentColor;
+    mask-image: url('/core/assets/icons/arrow-square-out.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    width: 1em;
+    height: 1em;
+    aspect-ratio: 1;
     display: inline-flex;
+    text-decoration: none;
     float: none;
     transition: color 300ms;
 }
@@ -560,13 +567,21 @@ main > *:not(header) details summary {
 }
 main > details summary::before,
 main > *:not(header) details summary::before {
-    content: '\e914';
-    font-family: icomoon;
+    content: '';
+    background-color: currentColor;
+    mask-image: url('/core/assets/icons/plus-circle.svg');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    width: 1em;
+    height: 1em;
+    aspect-ratio: 1;
+    display: inline-flex;
     font-size: var(--ita-fontSizes-6);
 }
 main > details[open] summary::before,
 main > *:not(header) details[open] summary::before {
-    content: '\e913';
+    mask-image: url('/core/assets/icons/minus-circle.svg');
 }
 main > details:has(+ details) summary,
 main > details + details summary,
