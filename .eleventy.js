@@ -40,7 +40,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addShortcode("alert", libdocFunctions.shortcodes.alert);
     eleventyConfig.addPairedShortcode("alertAlt", libdocFunctions.shortcodes.alert);
     eleventyConfig.addShortcode("embed", libdocFunctions.shortcodes.embed);
-    eleventyConfig.addShortcode("icomoon", libdocFunctions.shortcodes.icomoon);
+    eleventyConfig.addShortcode("icons", libdocFunctions.shortcodes.icons);
     eleventyConfig.addShortcode("icon", libdocFunctions.shortcodes.icon);
     eleventyConfig.addShortcode("iconCard", libdocFunctions.shortcodes.iconCard);
     eleventyConfig.addPairedShortcode("sandbox", libdocFunctions.shortcodes.sandbox);

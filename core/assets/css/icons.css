@@ -1,0 +1,133 @@
+
+
+/* ICONS */
+[class*="icon-"] {
+    background-color: currentColor;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    width: 1em;
+    height: 1em;
+    aspect-ratio: 1;
+    display: inline-flex;
+}
+.icon-x {
+    mask-image: url('/core/assets/icons/x.svg');
+}
+.icon-arrow-line-down {
+    mask-image: url('/core/assets/icons/arrow-line-down.svg');
+}
+.icon-arrow-line-up {
+    mask-image: url('/core/assets/icons/arrow-line-up.svg');
+}
+.icon-arrow-square-out {
+    mask-image: url('/core/assets/icons/arrow-square-out.svg');
+}
+.icon-calendar-dots {
+    mask-image: url('/core/assets/icons/calendar-dots.svg');
+}
+.icon-caret-down {
+    mask-image: url('/core/assets/icons/caret-down.svg');
+}
+.icon-caret-left {
+    mask-image: url('/core/assets/icons/caret-left.svg');
+}
+.icon-caret-right {
+    mask-image: url('/core/assets/icons/caret-right.svg');
+}
+.icon-caret-up {
+    mask-image: url('/core/assets/icons/caret-up.svg');
+}
+.icon-check-circle {
+    mask-image: url('/core/assets/icons/check-circle.svg');
+}
+.icon-check {
+    mask-image: url('/core/assets/icons/check.svg');
+}
+.icon-circle-half {
+    mask-image: url('/core/assets/icons/circle-half.svg');
+}
+.icon-code {
+    mask-image: url('/core/assets/icons/code.svg');
+}
+.icon-copy-simple {
+    mask-image: url('/core/assets/icons/copy-simple.svg');
+}
+.icon-dots-six-vertical {
+    mask-image: url('/core/assets/icons/dots-six-vertical.svg');
+}
+.icon-faders {
+    mask-image: url('/core/assets/icons/faders.svg');
+}
+.icon-house {
+    mask-image: url('/core/assets/icons/house.svg');
+}
+.icon-images {
+    mask-image: url('/core/assets/icons/images.svg');
+}
+.icon-info {
+    mask-image: url('/core/assets/icons/info.svg');
+}
+.icon-link-simple {
+    mask-image: url('/core/assets/icons/link-simple.svg');
+}
+.icon-list-dashes {
+    mask-image: url('/core/assets/icons/list-dashes.svg');
+}
+.icon-list {
+    mask-image: url('/core/assets/icons/list.svg');
+}
+.icon-lock-simple {
+    mask-image: url('/core/assets/icons/lock-simple.svg');
+}
+.icon-magnifying-glass {
+    mask-image: url('/core/assets/icons/magnifying-glass.svg');
+}
+.icon-minus-circle {
+    mask-image: url('/core/assets/icons/minus-circle.svg');
+}
+.icon-parachute {
+    mask-image: url('/core/assets/icons/parachute.svg');
+}
+.icon-pen {
+    mask-image: url('/core/assets/icons/pen.svg');
+}
+.icon-pencil-simple {
+    mask-image: url('/core/assets/icons/pencil-simple.svg');
+}
+.icon-person-arms-spread {
+    mask-image: url('/core/assets/icons/person-arms-spread.svg');
+}
+.icon-play {
+    mask-image: url('/core/assets/icons/play.svg');
+}
+.icon-plus-circle {
+    mask-image: url('/core/assets/icons/plus-circle.svg');
+}
+.icon-printer {
+    mask-image: url('/core/assets/icons/printer.svg');
+}
+.icon-rocket {
+    mask-image: url('/core/assets/icons/rocket.svg');
+}
+.icon-rss {
+    mask-image: url('/core/assets/icons/rss.svg');
+}
+.icon-shield-warning {
+    mask-image: url('/core/assets/icons/shield-warning.svg');
+}
+.icon-sidebar {
+    mask-image: url('/core/assets/icons/sidebar.svg');
+}
+.icon-star-fill {
+    mask-image: url('/core/assets/icons/star-fill.svg');
+}
+.icon-star {
+    mask-image: url('/core/assets/icons/star.svg');
+}
+.icon-tag-simple {
+    mask-image: url('/core/assets/icons/tag-simple.svg');
+}
+.icon-user {
+    mask-image: url('/core/assets/icons/user.svg');
+}
