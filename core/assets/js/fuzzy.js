@@ -77,7 +77,7 @@ const fuzzy = {
     },
     sanitizeIndex: function() {
         if (typeof fuzzy.indexItems !== null && fuzzy.sanitizedIndex === null) {
-            const filterArray = ['./core/assets/fonts/icomoon/demo.html'];
+            const filterArray = [];
             fuzzy.sanitizedIndex = [];
             fuzzy.indexItems.forEach(function(item) {
                 if (!filterArray.includes(item.title)) {

@@ -33,7 +33,7 @@ const search = {
     searchIndex: function(query) {
         if (typeof search.searchIndexArray == 'object' && search.searchIndexArray !== null) {
             let markup = '';
-            const itemTitleIgnoreFilter = ['./core/assets/fonts/icomoon/demo.html'];
+            const itemTitleIgnoreFilter = [];
             search.searchIndexArray.forEach(function(item) {
                 if (!itemTitleIgnoreFilter.includes(item.title)) {
                     query = search.sanitizeQuery(query);

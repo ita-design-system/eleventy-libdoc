@@ -369,37 +369,6 @@ const libdocUi = {
 
         svg.setAttribute('viewBox', viewbox);
     },
-    renderIcomoon: function(id) {
-        if (typeof id == 'string') {
-            const elIconsContainer = document.getElementById(id);
-            if (elIconsContainer !== null) {
-                fetch('/core/assets/fonts/icomoon/selection.json')
-                    .then(response => response.json())
-                    .then(json => {
-                        json.icons.forEach(function(iconData) {
-                            const   elItem = document.createElement('li'),
-                                    elSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-                            elItem.setAttribute('class', 'd-flex fd-column ai-center | ta-center');
-                            elSvg.setAttribute('width', '32');
-                            elSvg.setAttribute('height', '32');
-                            elSvg.setAttributeNS(null, "viewBox", "0 0 32 32");
-                            elSvg.setAttribute('fill', 'none');
-                            iconData.icon.paths.forEach(function(pathData) {
-                                elSvg.innerHTML += `<path d="${pathData}" fill="currentColor"></path>`;
-                            });
-                            elItem.appendChild(elSvg);
-                            elIconsContainer.appendChild(elItem);
-                            libdocUi.fitSvgToItsContent(elSvg);
-                            elItem.innerHTML += `<code>icon-${iconData.properties.name}</code>`;
-                        });
-                    })
-                    .catch(error => {
-                        // Handle the error
-                        console.log(error);
-                    });
-            }
-        }
-    },
     updateTransferSizeDisplay: function() {
         const currentTransferSize = libdocUi.getTransferSize();
         if (currentTransferSize > 0) {
@@ -1012,9 +981,6 @@ const libdocUi = {
         });
         libdocUi.el.main.querySelectorAll('abbr[title]').forEach(function(el) {
             el.addEventListener('click', libdocUi.handlers._clickAbbr);
-        });
-        document.querySelectorAll('main svg.icomoon-icon').forEach(function(el) {
-            libdocUi.fitSvgToItsContent(el)
         });
         document.body.addEventListener('touchstart', libdocUi.handlers._touchStart);
         libdocUi.el.inputsColorScheme.forEach(function(elInput) {
