@@ -110,7 +110,7 @@ export default {
             }
         },
         cleanup: async function(content) {
-            content = content.replaceAll(`<table>`, `<div class="o-auto w-100 table-wrapper"><table>`);
+            content = content.replaceAll(`<table`, `<div class="o-auto w-100 table-wrapper"><table`);
             content = content.replaceAll(`</table>`, `</table></div>`);
             content = content.replaceAll(`<p><div`, `<div`);
             content = content.replaceAll(`</div></p>`, `</div>`);
