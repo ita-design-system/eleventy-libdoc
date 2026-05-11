@@ -25,6 +25,25 @@ Eleventy LibDoc is an easy to use and content focused starter project for [Eleve
 
 [View deployment of this repository](https://11ty-libdoc-blank.netlify.app)
 
+## Update LibDoc
+
+This process shows how to update Eleventy LibDoc Starter template.
+
+> [!NOTE]
+> As a starter template, any edit made into the following files and folders needs to be saved and pasted into the new version.
+> **If edits were made into these files/folders, please save it and paste changes into the new version.**
+
+1. Delete the following files and folders:
+  * `_data`
+  * `_includes`
+  * `core`
+  * `node_modules`
+  * `.eleventy.js`
+  * `package-lock.json`
+  * `package.json`
+2. Replace the same files and folders from the new Eleventy LibDoc version.
+3. Run `npm install`, then you get the latest version. You can verify current version at the bottom of each page.
+
 ## Key features
 
 * **Content focused** <br>LibDoc is easy to install, deploy and use.
