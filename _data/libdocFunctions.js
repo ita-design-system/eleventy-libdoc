@@ -180,6 +180,18 @@ export default {
             if (fileHistory == "") { return false }
 
             return fileHistory.split(/\r?\n/)[0];
+        },
+        navigationMaxDepth: async function(entries, maxDepth, currentDepth = 0) {
+            function recurse(entries, maxDepth, currentDepth) {
+                if (currentDepth >= maxDepth) return [];
+                return entries.map(entry => ({
+                    ...entry,
+                    children: entry.children
+                        ? recurse(entry.children, maxDepth, currentDepth + 1)
+                        : []
+                }));
+            }
+            return recurse(entries, maxDepth, currentDepth);
         }
     },
     collections: {
