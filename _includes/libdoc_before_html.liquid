@@ -84,7 +84,7 @@
 {%- endif -%}
 
 {%- comment -%} Eleventy Navigation {%- endcomment -%}
-{%- assign eleventyNavigationMenu = collections.all | eleventyNavigation | eleventyNavigationToHtml: libdocSystem.navigationOptions -%}
+{%- assign eleventyNavigationMenu = collections.all | eleventyNavigation | navigationMaxDepth: 3 | eleventyNavigationToHtml: libdocSystem.navigationOptions -%}
 {%- assign currentPageHrefAttribute = '<a href="' | append: page.url | append: '"' -%}
 {%- capture currentPageReplacementAttribute -%}{{ currentPageHrefAttribute }} aria-current="page"{%- endcapture -%}
 {%- assign eleventyNavigationMenu = eleventyNavigationMenu | replace: currentPageHrefAttribute, currentPageReplacementAttribute -%}

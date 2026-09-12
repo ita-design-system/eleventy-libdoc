@@ -29,6 +29,7 @@ export default function(eleventyConfig) {
     eleventyConfig.addAsyncFilter("toc", libdocFunctions.filters.toc);
     eleventyConfig.addAsyncFilter("sanitizeJSON", libdocFunctions.filters.sanitizeJson);
     eleventyConfig.addAsyncFilter("gitLastModifiedDate", libdocFunctions.filters.gitLastModifiedDate);
+    eleventyConfig.addAsyncFilter("navigationMaxDepth", libdocFunctions.filters.navigationMaxDepth);
     // END FILTERS
 
     // START COLLECTIONS
