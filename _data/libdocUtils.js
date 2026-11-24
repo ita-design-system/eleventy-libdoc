@@ -35,17 +35,19 @@ export default {
         }
         return aRet.join('');
     },
+    // Here's a Unicode-aware slugify that keeps letters and numbers from any script,
+    // normalizes accents consistently, and produces clean hyphen-separated output:
+    // slugify("Café Déjà Vu");          // "café-déjà-vu"
+    // slugify("東京 Tokyo 2024!");       // "東京-tokyo-2024"
+    // slugify("Привет, мир!");          // "привет-мир"
+    // slugify("  --Hello   World--  "); // "hello-world"
+    // slugify("نص عربي ٣");              // "نص-عربي-٣"
     slugify: function(str) {
-        // https://jasonwatmore.com/vanilla-js-slugify-a-string-in-javascript
-        // make lower case and trim
-        let slug = str.toLowerCase().trim();
-        // remove accents from charaters
-        slug = slug.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        // replace invalid chars with spaces
-        slug = slug.replace(/[^\p{L}\p{N}\s-]/gu, ' ').trim();
-        // replace multiple spaces or hyphens with a single hyphen
-        slug = slug.replace(/[\s-]+/g, '-');
-        return slug;
+        return str
+            .normalize('NFC')                      // compose accents so é stays one char
+            .toLowerCase()                         // locale-insensitive lowercase
+            .replace(/[^\p{L}\p{M}\p{Nd}]+/gu, '-') // anything not letter/mark/digit -> hyphen
+            .replace(/^-+|-+$/g, '');              // trim leading/trailing hyphens
     },
     extractHtmlTagsFromString: function(string, htmlTagsListArray) {
         // https://stackoverflow.com/a/65725198
