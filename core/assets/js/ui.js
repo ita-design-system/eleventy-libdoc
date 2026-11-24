@@ -460,8 +460,16 @@ const libdocUi = {
                         br-0="xs,sm">`;
             libdocUi.el.ftocHeadings = [];
             libdocUi.el.tocMainOl.querySelectorAll('a').forEach(function(el) {
-                const   headingReference = el.getAttribute(`href`),
+                const headingReference = el.getAttribute(`href`);
+                let elHeading = null;
+                if (headingReference && headingReference.startsWith('#') && headingReference.length > 1) {
+                    try {
                         elHeading = libdocUi.el.main.querySelector(headingReference);
+                    } catch (e) {
+                        elHeading = null;
+                    }
+                }
+                if (elHeading === null) return;
                 libdocUi.el.ftocHeadings.push(elHeading);
                 floatingTocMarkup += `
                     <li>
