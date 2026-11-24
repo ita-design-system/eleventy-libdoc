@@ -2,281 +2,337 @@
 	"copiedToClipboard": {
 		"en": "Copied to clipboard",
 		"fr": "Copié dans le presse-papiers",
-		"it": "Copiato negli appunti"
+		"it": "Copiato negli appunti",
+		"ru": "Скопировано в буфер обмена"
 	},
 	"code": {
 		"en": "Code",
 		"fr": "Code",
-		"it": "Codice"
+		"it": "Codice",
+		"ru": "Код"
 	},
 	"colorSchemes": {
 		"en": "Color schemes",
 		"fr": "Modes d’apparences",
-		"it": "Modalità visive"
+		"it": "Modalità visive",
+		"ru": "Тема"
 	},
 	"colorSchemeAuto": {
 		"en": "Automatic",
 		"fr": "Automatique",
-		"it": "Automatica"
+		"it": "Automatica",
+		"ru": "Авто"
 	},
 	"colorSchemeDescriptionAuto": {
 		"en": "Based on you operating system preference",
 		"fr": "Basé sur les règles d’affichage de votre système",
-		"it": "Basata sulle preferenze del tuo sistema"
+		"it": "Basata sulle preferenze del tuo sistema",
+		"ru": "Тема ОС"
 	},
 	"colorSchemeLight": {
 		"en": "Light",
 		"fr": "Clair",
-		"it": "Chiaro"
+		"it": "Chiaro",
+		"ru": "Светлая"
 	},
 	"colorSchemeDescriptionLight": {
 		"en": "Always apply light mode",
 		"fr": "Toujours appliquer le mode clair",
-		"it": "Applica sempre il tema chiaro"
+		"it": "Applica sempre il tema chiaro",
+		"ru": "Всегда светлая тема"
 	},
 	"colorSchemeDark": {
 		"en": "Dark",
 		"fr": "Sombre",
-		"it": "Scuro"
+		"it": "Scuro",
+		"ru": "Тёмная"
 	},
 	"colorSchemeDescriptionDark": {
 		"en": "Always apply dark mode",
 		"fr": "Toujours appliquer le mode sombre",
-		"it": "Applica sempre il tema scuro"
+		"it": "Applica sempre il tema scuro",
+		"ru": "Всегда тёмная тема"
 	},
 	"copied": {
 		"en": "Copied",
 		"fr": "Copié",
-		"it": "Copiato"
+		"it": "Copiato",
+		"ru": "Скопировано"
 	},
 	"copy": {
 		"en": "Copy",
 		"fr": "Copier",
-		"it": "Copia"
+		"it": "Copia",
+		"ru": "Копировать"
 	},
 	"copyCode": {
 		"en": "Copy code",
 		"fr": "Copier le code",
-		"it": "Copia il codice"
+		"it": "Copia il codice",
+		"ru": "Копировать код"
 	},
 	"copyHTML": {
 		"en": "Copy HTML",
 		"fr": "Copier le HTML",
-		"it": "Copia l’HTML"
+		"it": "Copia l’HTML",
+		"ru": "Копировать HTML"
 	},
 	"copyURL": {
 		"en": "Copy URL",
 		"fr": "Copier l’URL",
-		"it": "Copia l’URL"
+		"it": "Copia l’URL",
+		"ru": "Копировать URL"
 	},
 	"enable": {
 		"en": "Enable",
 		"fr": "Activer",
-		"it": "Attiva"
+		"it": "Attiva",
+		"ru": "Включить"
 	},
 	"goToTopOfPage": {
 		"en": "Go to top of page",
 		"fr": "Aller en haut de page",
-		"it": "Vai in vima alla pagina"
+		"it": "Vai in vima alla pagina",
+		"ru": "Наверх страницы"
 	},
 	"editThisPage": {
 		"en": "Edit this page",
 		"fr": "Modifier la page",
-		"it": "Modifica la pagina"
+		"it": "Modifica la pagina",
+		"ru": "Редактировать страницу"
 	},
 	"height": {
 		"en": "Height",
 		"fr": "Hauteur",
-		"it": "Altezza"
+		"it": "Altezza",
+		"ru": "Высота"
 	},
 	"homepage": {
 		"en": "Homepage",
 		"fr": "Page d’accueil",
-		"it": "Pagina iniziale"
+		"it": "Pagina iniziale",
+		"ru": "Главная"
 	},
 	"homepageShort": {
 		"en": "Home",
 		"fr": "Accueil",
-		"it": "Home"
+		"it": "Home",
+		"ru": "Главная"
 	},
 	"inANewTab": {
 		"en": "In a new tab",
 		"fr": "Dans un nouvel onglet",
-		"it": "In una nuova scheda"
+		"it": "In una nuova scheda",
+		"ru": "В новой вкладке"
 	},
 	"lastModified": {
 		"en": "Last modified",
 		"fr": "Dernière modification",
-		"it": "Ultima modifica"
+		"it": "Ultima modifica",
+		"ru": "Последнее изменение"
 	},
 	"menu": {
 		"en": "Menu",
 		"fr": "Menu",
-		"it": "Menu"
+		"it": "Menu",
+		"ru": "Меню"
 	},
 	"noscriptAlert": {
 		"en": "It seems that your browser JavaScript is disabled, LibDoc is set to fallback mode with reduced features.",
 		"fr": "Il semble que JavaScript soit désactivé de votre navigateur, LibDoc est en mode restreint avec des fonctionnalités réduites.",
-		"it": "Sembra che il tuo browser abbia JavaScript disattivato, LibDoc è impostato in modalità di riserva, con funzionalità ridotte."
+		"it": "Sembra che il tuo browser abbia JavaScript disattivato, LibDoc è impostato in modalità di riserva, con funzionalità ridotte.",
+		"ru": "Похоже, JavaScript в браузере отключён — LibDoc работает в урезанном режиме."
 	},
 	"open": {
 		"en": "Open",
 		"fr": "Ouvrir",
-		"it": "Apri"
+		"it": "Apri",
+		"ru": "Открыть"
 	},
 	"openInANewTab": {
 		"en": "Open in a new tab",
 		"fr": "Ouvrir dans un nouvel onglet",
-		"it": "Apri in una nuova scheda"
+		"it": "Apri in una nuova scheda",
+		"ru": "Открыть в новой вкладке"
 	},
 	"otherCustomLinks": {
 		"en": "Other custom links",
 		"fr": "Autres liens personnalisés",
-		"it": "Altri collegamenti personalizzati"
+		"it": "Altri collegamenti personalizzati",
+		"ru": "Другие ссылки"
 	},
 	"page": {
 		"en": "Page",
 		"fr": "Page",
-		"it": "Pagina"
+		"it": "Pagina",
+		"ru": "Страница"
 	},
 	"pages": {
 		"en": "Pages",
 		"fr": "Pages",
-		"it": "Pagine"
+		"it": "Pagine",
+		"ru": "Страницы"
 	},
 	"pagesTagged": {
 		"en": "Pages tagged",
 		"fr": "Pages taguées",
-		"it": "Pagine con tag"
+		"it": "Pagine con tag",
+		"ru": "Страницы с тегом"
 	},
 	"preferences": {
 		"en": "Preferences",
 		"fr": "Préférences",
-		"it": "Preferenze"
+		"it": "Preferenze",
+		"ru": "Настройки"
 	},
 	"reload": {
 		"en": "Reload",
 		"fr": "Recharger",
-		"it": "Ricarica"
+		"it": "Ricarica",
+		"ru": "Обновить"
 	},
 	"reloaded": {
 		"en": "Reloaded",
 		"fr": "Rechargé",
-		"it": "Ricaricato"
+		"it": "Ricaricato",
+		"ru": "Обновлено"
 	},
 	"result": {
 		"en": "result",
 		"fr": "Résultat",
-		"it": "Risultato"
+		"it": "Risultato",
+		"ru": "Результат"
 	},
 	"sandbox": {
 		"en": "Sandbox",
 		"fr": "Bac à sable",
-		"it": "Sandbox"
+		"it": "Sandbox",
+		"ru": "Песочница"
 	},
 	"sandboxResizeHelper": {
 		"en": "Click and drag to resize code and result",
 		"fr": "Cliquer déplacer pour redimensionner code et résultat",
-		"it": "Clicca e trascina per ridimensionare il codice e il risultato"
+		"it": "Clicca e trascina per ridimensionare il codice e il risultato",
+		"ru": "Нажмите и тяните, чтобы изменить размер кода и результата"
 	},
 	"search": {
 		"en": "Search",
 		"fr": "Rechercher",
-		"it": "Cerca"
+		"it": "Cerca",
+		"ru": "Поиск"
 	},
 	"searchClear": {
 		"en": "Clear input",
 		"fr": "Effacer la saisie",
-		"it": "Cancella l’input"
+		"it": "Cancella l’input",
+		"ru": "Очистить ввод"
 	},
 	"searchMinimumCharacters": {
 		"en": "3 characters min.",
 		"fr": "3 caractères min.",
-		"it": "Almeno 3 aratteri"
+		"it": "Almeno 3 aratteri",
+		"ru": "Минимум 3 символа"
 	},
 	"searchResultsNoResultForQuery": {
 		"en": "No result for query",
 		"fr": "Aucun résultat pour la requête",
-		"it": "Nessun risultato per questa ricerca"
+		"it": "Nessun risultato per questa ricerca",
+		"ru": "Ничего не найдено по запросу"
 	},
     "searchOccurrence": {
         "en": "Occurrence search",
         "fr": "Recherche d’occurrence",
-		"it": "Ricerca di risultato"
+		"it": "Ricerca di risultato",
+		"ru": "Поиск совпадений"
     },
 	"searchOccurrencesCurrent": {
 		"en": "Current search occurrence",
 		"fr": "Occurrence actuelle",
-		"it": "Attuale risultato"
+		"it": "Attuale risultato",
+		"ru": "Текущее совпадение"
 	},
 	"searchOccurrencesNext": {
 		"en": "Next search occurrence",
 		"fr": "Occurrence suivante",
-		"it": "Risultato seguente"
+		"it": "Risultato seguente",
+		"ru": "Следующее совпадение"
 	},
 	"searchOccurrencesPrevious": {
 		"en": "Previous search occurrence",
 		"fr": "Occurrence précédente",
-		"it": "Risultato precedente"
+		"it": "Risultato precedente",
+		"ru": "Предыдущее совпадение"
 	},
 	"searchOccurrencesStop": {
 		"en": "Stop search occurrences",
 		"fr": "Fermet la recherches d’occurrences",
-		"it": "Ferma la ricerca"
+		"it": "Ferma la ricerca",
+		"ru": "Остановить поиск совпадений"
 	},
     "searchPlaceholder": {
         "en": "Press 🆂 to search",
         "fr": "Presser 🆂 pour rechercher",
-        "it": "Premere 🆂 per cercare"
+        "it": "Premere 🆂 per cercare",
+        "ru": "Нажмите 🆂 для поиска"
     },
 	"searchSubmit": {
 		"en": "Submit search",
 		"fr": "Lancer la recherche",
-		"it": "Effettua la ricerca"
+		"it": "Effettua la ricerca",
+		"ru": "Искать"
 	},
 	"tableOfContent": {
 		"en": "Table of content",
 		"fr": "Sommaire",
-		"it": "Indice"
+		"it": "Indice",
+		"ru": "Оглавление"
 	},
 	"tableOfContentAbbr": {
 		"en": "TOC",
 		"fr": "Sommaire",
-		"it": "Indice"
+		"it": "Indice",
+		"ru": "Оглавление"
 	},
 	"tag": {
 		"en": "Tag",
 		"fr": "Tag",
-		"it": "Tag"
+		"it": "Tag",
+		"ru": "Тег"
 	},
 	"tagsList": {
 		"en": "Tags list",
 		"fr": "Liste des tags",
-		"it": "Lista dei tag"
+		"it": "Lista dei tag",
+		"ru": "Список тегов"
 	},
 	"tagsListDescription": {
 		"en": "List of every tag available",
 		"fr": "Liste de l’ensemble des tags disponibles",
-		"it": "Lista di tutti i tag disponibili"
+		"it": "Lista di tutti i tag disponibili",
+		"ru": "Список всех доступных тегов"
 	},
 	"toggleFloatingToc": {
 		"en": "Toggle floating Table of content",
 		"fr": "Basculer la table des matières flottante",
-		"it": "Cambia impostazione indice fluttuante"
+		"it": "Cambia impostazione indice fluttuante",
+		"ru": "Показать/скрыть плавающее оглавление"
 	},
 	"top": {
 		"en": "Top",
 		"fr": "Haut",
-		"it": "In cima"
+		"it": "In cima",
+		"ru": "Наверх"
 	},
 	"userPreferences": {
 		"en": "User preferences",
 		"fr": "Préférences utilisateur",
-		"it": "Preferenze dell'utente"
+		"it": "Preferenze dell'utente",
+		"ru": "Настройки пользователя"
 	},
 	"width": {
 		"en": "Width",
 		"fr": "Largeur",
-		"it": "Larghezza"
+		"it": "Larghezza",
+		"ru": "Ширина"
 	}
 }
