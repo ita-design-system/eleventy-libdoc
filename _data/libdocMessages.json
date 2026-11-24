@@ -141,7 +141,7 @@
 		"en": "It seems that your browser JavaScript is disabled, LibDoc is set to fallback mode with reduced features.",
 		"fr": "Il semble que JavaScript soit désactivé de votre navigateur, LibDoc est en mode restreint avec des fonctionnalités réduites.",
 		"it": "Sembra che il tuo browser abbia JavaScript disattivato, LibDoc è impostato in modalità di riserva, con funzionalità ridotte.",
-		"ru": "Похоже, JavaScript в браузере отключён — LibDoc работает в урезанном режиме."
+		"ru": "Похоже, JavaScript в браузере отключён — сайт работает в урезанном режиме."
 	},
 	"open": {
 		"en": "Open",
@@ -315,7 +315,7 @@
 		"en": "Toggle floating Table of content",
 		"fr": "Basculer la table des matières flottante",
 		"it": "Cambia impostazione indice fluttuante",
-		"ru": "Показать/скрыть плавающее оглавление"
+		"ru": "Переключить плавающее оглавление"
 	},
 	"top": {
 		"en": "Top",
