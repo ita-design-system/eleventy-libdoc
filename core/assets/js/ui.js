@@ -948,7 +948,7 @@ const libdocUi = {
         }
     },
     update: function() {
-        libdocUi.defaults.darkModeCssMedia = libdocUi.el.darkModeCssMetaLink.media;
+        libdocUi.defaults.darkModeCssMedia = libdocUi.el.darkModeCssMetaLink.dataset.libdocMediaDefault;
         libdocUi.setColorScheme(libdocUi.getUserPreferences().colorScheme);
         libdocUi._currentScreenSizeName = libdocUi.getCurrentScreenSizeName();
         hljs.highlightAll();

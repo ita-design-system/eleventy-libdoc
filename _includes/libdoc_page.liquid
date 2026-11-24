@@ -61,7 +61,20 @@
     <link rel="stylesheet" href="/core/assets/css/ds.css">
     <link rel="stylesheet" href="/core/assets/css/ds__defaults.css">
     <link rel="stylesheet" href="/core/assets/css/ds__colors.css">
-    <link rel="stylesheet" href="/core/assets/css/ds__dark_mode.css" media="(prefers-color-scheme: dark)" id="libdoc_dark_mode_css">
+    <script>
+        (function () {
+            var colorScheme = 'auto';
+            try {
+                colorScheme = (JSON.parse(localStorage.getItem('eleventyLibdoc')) || {}).colorScheme || 'auto';
+            } catch (e) {}
+            var media = colorScheme === 'dark' ? 'all' : colorScheme === 'light' ? 'not all' : '(prefers-color-scheme: dark)';
+            document.write('<link rel="stylesheet" href="/core/assets/css/ds__dark_mode.css" media="' + media + '" data-libdoc-media-default="(prefers-color-scheme: dark)" id="libdoc_dark_mode_css">');
+        })();
+    </script>
+    <noscript>
+        <link rel="stylesheet" href="/core/assets/css/ds__dark_mode.css" media="(prefers-color-scheme: dark)">
+    </noscript>
+
     <link rel="stylesheet" href="/core/assets/css/hljs/night-owl.css">
     <link rel="stylesheet" href="/core/assets/css/icons.css">
     <style>
