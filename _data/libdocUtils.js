@@ -72,7 +72,7 @@ export default {
         return id;
     },
     templates: {
-        sandbox: function({iframeAttribute, iframeCommands, title, code, enableSwitchId}) {
+        sandbox: function({iframeAttribute, iframeCommands, title, code, enableSwitchId, lang = libdocConfig.lang}) {
             return `
                 <aside class="d-flex | sandbox"
                     fd-column="xs,sm"
@@ -88,12 +88,12 @@ export default {
                         <button type="button"
                             class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer | sandbox__tab"
                             data-name="code">
-                            ${libdocMessages.code[libdocConfig.lang]}
+                            ${libdocMessages.code[lang]}
                         </button>
                         <button type="button"
                             class="d-flex | pt-2 pb-2 pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | b-0 brad-1 cur-pointer | sandbox__tab __active"
                             data-name="iframe">
-                            ${libdocMessages.result[libdocConfig.lang]}
+                            ${libdocMessages.result[lang]}
                         </button>
                     </div>
                     <div class="d-flex fd-column d-none--xs d-none--sm | o-hidden | brad-3 | sandbox__code_wrapper"
@@ -108,8 +108,8 @@ export default {
                             </p>
                             <button type="button"
                                 class="d-flex ai-center | pl-5 pr-5 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer | sandbox__copy_code"
-                                title="${libdocMessages.copyHTML[libdocConfig.lang]}">
-                                <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.copy[libdocConfig.lang]}</span>
+                                title="${libdocMessages.copyHTML[lang]}">
+                                <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.copy[lang]}</span>
                             </button>
                         </header>
                         <div class="pos-relative"
@@ -129,7 +129,7 @@ export default {
                                 <label for="${enableSwitchId}_code"
                                     class="d-flex ai-center gap-1 | p-5 | fvs-wght-500 tt-uppercase | bc-neutral-900 brad-2 cur-pointer">
                                     <span class="icon-play"></span>
-                                    ${libdocMessages.enable[libdocConfig.lang]}
+                                    ${libdocMessages.enable[lang]}
                                 </label>
                             </div>
                         </div>
@@ -139,7 +139,7 @@ export default {
                         </div>
                     </div>
                     <button class="pos-relative | p-0 | b-0 | sandbox__resizer"
-                        title="${libdocMessages.sandboxResizeHelper[libdocConfig.lang]}"
+                        title="${libdocMessages.sandboxResizeHelper[lang]}"
                         d-none="xs,sm">
                         <span class="icon-dots-six-vertical fs-5"></span>
                     </button>
@@ -160,13 +160,13 @@ export default {
                                     ${libdocConfig.sandboxRunSwitch ? `` : `checked`}>
                                 <label for="${enableSwitchId}_iframe"
                                     class="d-flex ai-center gap-1 | p-5 | fvs-wght-500 tt-uppercase | bc-neutral-900 brad-2 cur-pointer">
-                                    <span class="icon-play"></span> ${libdocMessages.enable[libdocConfig.lang]}
+                                    <span class="icon-play"></span> ${libdocMessages.enable[lang]}
                                 </label>
                             </div>
                         </div>
                         <ul class="d-flex gap-2 | m-0 pt-1 pb-1 pl-2 | fvs-wght-400 fs-2 lh-1 | ls-none">
-                            <li>${libdocMessages.width[libdocConfig.lang]}: <span class="sandbox__monitor__iframe_width">-</span>px</li>
-                            <li>${libdocMessages.height[libdocConfig.lang]}: <span class="sandbox__monitor__iframe_height">-</span>px</li>
+                            <li>${libdocMessages.width[lang]}: <span class="sandbox__monitor__iframe_width">-</span>px</li>
+                            <li>${libdocMessages.height[lang]}: <span class="sandbox__monitor__iframe_height">-</span>px</li>
                         </ul>
                     </div>
                 </aside>`;
