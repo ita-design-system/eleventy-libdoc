@@ -2,14 +2,17 @@
 permalink: feed.xml
 eleventyExcludeFromCollections: true
 ---
+{%- set rootURL -%}
+    {%- if libdocConfig.productionUrl != '/' %}{{ libdocConfig.productionUrl }}{% endif -%}
+{%- endset -%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ libdocConfig.lang }}">
     <title>{{ libdocConfig.siteTitle }}</title>
     <subtitle>{{ libdocConfig.siteDescription }}</subtitle>
     <link href="{{ permalink }}" rel="self" />
-    <link href="{{ libdocConfig.productionUrl }}{{ page.url }}" />
+    <link href="{{ rootURL }}{{ page.url }}" />
     <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-    <id>{{ libdocConfig.productionUrl }}{{ page.url }}</id>
+    <id>{% if libdocConfig.productionUrl != '/' %}{{ libdocConfig.productionUrl }}{% endif %}{{ page.url }}</id>
     <author>
         <name>
             {%- if libdocConfig.blogAuthor == false -%}
@@ -20,7 +23,7 @@ eleventyExcludeFromCollections: true
         </name>
     </author>
     {%- for post in collections.post | reverse %}
-        {%- set absolutePostUrl %}{{ libdocConfig.productionUrl }}{{ post.url }}{% endset %}
+        {%- set absolutePostUrl %}{{ rootURL }}{{ post.url }}{% endset %}
         <entry>
             <title>
                 {%- if post.data.title == '' -%}
