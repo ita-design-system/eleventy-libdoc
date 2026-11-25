@@ -28,7 +28,7 @@ eleventyExcludeFromCollections: true
     </author>
     {%- for post in collections.post | reverse %}
         {%- set absolutePostUrl %}{{ rootURL }}{{ post.url }}{% endset %}
-        <entry>
+         <entry xml:lang="{{ post.data.language | default(libdocConfig.lang) }}">
             <title>
                 {%- if post.data.title == '' -%}
                     {{ post.inputPath }}
