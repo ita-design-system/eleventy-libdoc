@@ -11,8 +11,8 @@ eleventyExcludeFromCollections: true
     <subtitle>{{ libdocConfig.siteDescription }}</subtitle>
     <link href="{{ permalink }}" rel="self" />
     <link href="{{ rootURL }}{{ page.url }}" />
-    <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-    <id>{% if libdocConfig.productionUrl != '/' %}{{ libdocConfig.productionUrl }}{% endif %}{{ page.url }}</id>
+    <updated>{{- collections.post | getNewestCollectionItemDate | dateToRfc3339 -}}</updated>
+    <id>{{ rootURL }}{{ page.url }}</id>
     <author>
         <name>
             {%- if libdocConfig.blogAuthor == false -%}
@@ -33,8 +33,8 @@ eleventyExcludeFromCollections: true
                 {%- endif -%}
             </title>
             <link href="{{ absolutePostUrl }}" />
-            <updated>{{ post.date | dateToRfc3339 }}</updated>
-            <id>{{ absolutePostUrl }}</id>
+            <updated>{{- post.date | dateToRfc3339 -}}</updated>
+            <id>{{- absolutePostUrl -}}</id>
             <author>
                 <name>
                     {%- if post.data.author != false and post.data.author != '' and post.data.author != null -%}
