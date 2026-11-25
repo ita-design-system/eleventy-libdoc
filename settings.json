@@ -5,7 +5,6 @@
     "faviconUrl": "/assets/myfavicon.png",
     "blogTitle": "Blog",
     "blogDescription": "Here is the description of the blog part",
-    "productionUrl": "https://eleventy-libdoc.netlify.app",
     "customLinks": [
         {
             "url": "/feed.xml",

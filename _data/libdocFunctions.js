@@ -30,6 +30,13 @@ function currentPageLang(scope) {
 
 export default {
     pluginsParameters: {
+        eleventyHtmlBase: function() {
+            return {
+                baseHref: libdocUtils.isProd()
+                    ? libdocConfig.productionUrl
+                    : libdocConfig.developmentUrl
+            }
+        },
         eleventyImageTransform: function() {
             // https://www.11ty.dev/docs/plugins/image/#more-configuration-options
             const   params = libdocSystem.pluginsParameters.eleventyImageTransform,
@@ -82,7 +89,7 @@ export default {
                 if (libdocConfig.tocHtmlTags.includes(m1)) {
                     // Add id to the specified html tags
                     let slugifiedId = libdocUtils.slugify(m2);
-                    if (anchorsIds.includes(slugifiedId)) {
+                    if (slugifiedId === '' || anchorsIds.includes(slugifiedId)) {
                         slugifiedId += `-${i}`;
                     }
                     anchorsIds.push(slugifiedId);
@@ -162,7 +169,7 @@ export default {
                 const anchorsIds = [];
                 htmlTagsFound.forEach(function(htmlTag, tagIndex) {
                     let slugifiedId = libdocUtils.slugify(htmlTag.value);
-                    if (anchorsIds.includes(slugifiedId)) {
+                    if (slugifiedId === '' || anchorsIds.includes(slugifiedId)) {
                         slugifiedId += `-${tagIndex}`;
                     }
                     anchorsIds.push(slugifiedId);

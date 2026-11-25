@@ -460,8 +460,16 @@ const libdocUi = {
                         br-0="xs,sm">`;
             libdocUi.el.ftocHeadings = [];
             libdocUi.el.tocMainOl.querySelectorAll('a').forEach(function(el) {
-                const   headingReference = el.getAttribute(`href`),
+                const headingReference = el.getAttribute(`href`);
+                let elHeading = null;
+                if (headingReference && headingReference.startsWith('#') && headingReference.length > 1) {
+                    try {
                         elHeading = libdocUi.el.main.querySelector(headingReference);
+                    } catch (e) {
+                        elHeading = null;
+                    }
+                }
+                if (elHeading === null) return;
                 libdocUi.el.ftocHeadings.push(elHeading);
                 floatingTocMarkup += `
                     <li>
@@ -874,14 +882,13 @@ const libdocUi = {
         }
     },
     addExternalLinkIconIntoMainContent: function() {
-        libdocUi.el.main.querySelectorAll('main a[href^="https://"]').forEach(function(el) {
-            const link = new URL(el.href);
-            if (link.hostname != location.hostname) {
+        libdocUi.el.main.querySelectorAll('main a').forEach(function(el) {
+            const   link = new URL(el.href),
+                    reference = new URL(location);
+            if (link.hostname !== reference.hostname) {
                 el.target = '_blank';
                 el.title = `${libdocMessages.open} ${el.href} ${libdocMessages.inANewTab.toLowerCase()}`;
-                if (link.hostname == libdocSystem.productionUrl) {
-                    el.classList.add('__external-link');
-                }
+                el.classList.add('__external-link');
             }
         });
     },
