@@ -15,6 +15,9 @@ const libdocPackage = require("../package.json");
 import libdocConfig from "./libdocConfig.js";
 
 export default {
+    isProd: function() {
+        return process.env.NODE_ENV === "production";
+    },
     version: function() {
         return libdocPackage.version
     },

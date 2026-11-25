@@ -18,6 +18,13 @@ import libdocConfig         from    "./libdocConfig.js";
 
 export default {
     pluginsParameters: {
+        eleventyHtmlBase: function() {
+            return {
+                baseHref: libdocUtils.isProd()
+                    ? libdocConfig.productionUrl
+                    : libdocConfig.developmentUrl
+            }
+        },
         eleventyImageTransform: function() {
             // https://www.11ty.dev/docs/plugins/image/#more-configuration-options
             const   params = libdocSystem.pluginsParameters.eleventyImageTransform,

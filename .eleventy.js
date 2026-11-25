@@ -13,7 +13,7 @@ import libdocFunctions                      from "./_data/libdocFunctions.js";
 
 export default function(eleventyConfig) {
     // START PLUGINS
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin, libdocFunctions.pluginsParameters.eleventyHtmlBase());
     eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, libdocFunctions.pluginsParameters.eleventyImageTransform());

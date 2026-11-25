@@ -882,14 +882,13 @@ const libdocUi = {
         }
     },
     addExternalLinkIconIntoMainContent: function() {
-        libdocUi.el.main.querySelectorAll('main a[href^="https://"]').forEach(function(el) {
-            const link = new URL(el.href);
-            if (link.hostname != location.hostname) {
+        libdocUi.el.main.querySelectorAll('main a').forEach(function(el) {
+            const   link = new URL(el.href),
+                    reference = new URL(location);
+            if (link.hostname !== reference.hostname) {
                 el.target = '_blank';
                 el.title = `${libdocMessages.open} ${el.href} ${libdocMessages.inANewTab.toLowerCase()}`;
-                if (link.hostname == libdocSystem.productionUrl) {
-                    el.classList.add('__external-link');
-                }
+                el.classList.add('__external-link');
             }
         });
     },

@@ -92,12 +92,11 @@
             htmlBasePathPrefix: `{{ libdocConfig.htmlBasePathPrefix }}`,
             blogTitle: `{{ libdocConfig.blogTitle }}`,
             blogDescription: `{{ libdocConfig.blogDescription }}`,
-            displayTagsListLink: {{ libdocConfig.displayTagsListLink }}
+            displayTagsListLink: {{ libdocConfig.displayTagsListLink }},
         }
         const libdocSystem = {
             searchIndexUrl: `{{ '/core/assets/js/search_index.json' | url }}`,
             fuzzyIndexUrl: `{{ '/core/assets/js/fuzzy_index.json' | url }}`,
-            productionUrl: `{{ libdocSystem.productionUrl }}`,
             blogPostsCount: `{{ collections.post.size }}`
         }
     </script>
@@ -413,7 +412,8 @@
                     {% if editThisPageRootUrl.size > 0 %}
                         <a  href="{{ editThisPageUrl }}"
                             target="_blank"
-                            class="btn btn-primary-light">
+                            class="btn btn-primary-light"
+                            style="font-size: var(--ita-fontSizes-1)">
                             <span class="icon-pencil-simple"></span>
                             {{ libdocMessages.editThisPage[libdocConfig.lang] }}
                         </a>
