@@ -3,7 +3,11 @@ permalink: feed.xml
 eleventyExcludeFromCollections: true
 ---
 {%- set rootURL -%}
-    {%- if libdocConfig.productionUrl != '/' %}{{ libdocConfig.productionUrl }}{% endif -%}
+    {%- if libdocUtils.isProd() -%}
+        {%- if libdocConfig.productionUrl != '/' %}{{ libdocConfig.productionUrl }}{% endif -%}
+    {%- else -%}
+        {%- if libdocConfig.developmentUrl != '/' %}{{ libdocConfig.developmentUrl }}{% endif -%}
+    {%- endif -%}
 {%- endset -%}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ libdocConfig.lang }}">
@@ -52,7 +56,7 @@ eleventyExcludeFromCollections: true
                 {% if post.data.ogImageUrl !== false and post.data.ogImageUrl != '' and post.data.ogImageUrl != null %}
                     &lt;img src=&quot;{{ post.data.ogImageUrl }}&quot; alt=&quot;{{ post.data.title }}&quot;&gt;
                 {% endif %}
-                {{- post.content | renderTransforms(post.data.page, libdocConfig.productionUrl) -}}
+                {{- post.content | renderTransforms(post.data.page, rootURL) -}}
             </content>
         </entry>
     {%- endfor %}
