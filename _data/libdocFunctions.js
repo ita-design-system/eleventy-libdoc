@@ -16,6 +16,18 @@ const libdocMessages =      require("./libdocMessages.json");
 import libdocUtils          from    "./libdocUtils.js";
 import libdocConfig         from    "./libdocConfig.js";
 
+function currentPageLang(scope) {
+    const ctx = scope && (scope.ctx || scope.context);
+    let lang;
+    if (ctx && typeof ctx.get === "function") {
+        try { lang = ctx.get(["language"]); } catch (error) { lang = undefined; }
+        if (!lang) {
+            try { lang = ctx.get("language"); } catch (error) { lang = undefined; }
+        }
+    }
+    return lang || libdocConfig.lang;
+}
+
 export default {
     pluginsParameters: {
         eleventyImageTransform: function() {
@@ -121,7 +133,7 @@ export default {
         datePrefixText: async function(date) {
             let text = '';
             if (typeof date == 'string') {
-                text = libdocMessages.lastModified[libdocConfig.lang];
+                text = libdocMessages.lastModified[currentPageLang(this)];
             }
             return text;
         },
@@ -313,8 +325,9 @@ export default {
             return markup;
         },
         sandbox: async function(content, sandboxTitle) {
-            const   code = libdocUtils.HTMLEncode(content.replace(/[\n\r]/, '')),
-                    title = typeof sandboxTitle == `string` ? sandboxTitle : libdocMessages.sandbox[libdocConfig.lang],
+            const   lang = currentPageLang(this),
+                    code = libdocUtils.HTMLEncode(content.replace(/[\n\r]/, '')),
+                    title = typeof sandboxTitle == `string` ? sandboxTitle : libdocMessages.sandbox[lang],
                     iframeAttribute = `srcdoc="${code}"`,
                     enableSwitchId = libdocUtils.generateRandomId(),
                     iframeCommands = `<header class="d-flex jc-space-between | pl-5" style="height: 58px">
@@ -322,34 +335,35 @@ export default {
                                 srcdoc
                             </div>
                         </header>`;
-            return libdocUtils.templates.sandbox({iframeAttribute, iframeCommands, title, code, enableSwitchId});
+            return libdocUtils.templates.sandbox({iframeAttribute, iframeCommands, title, code, enableSwitchId, lang});
         },
         sandboxFile: async function(content, permalink, sandboxTitle) {
-            const   code = libdocUtils.HTMLEncode(content),
+            const   lang = currentPageLang(this),
+                    code = libdocUtils.HTMLEncode(content),
                     iframeAttribute = `src="${permalink}"`,
-                    title = typeof sandboxTitle == `string` ? sandboxTitle : libdocMessages.sandbox[libdocConfig.lang],
+                    title = typeof sandboxTitle == `string` ? sandboxTitle : libdocMessages.sandbox[lang],
                     enableSwitchId = libdocUtils.generateRandomId(),
                     iframeCommands = `<header class="d-flex jc-space-between gap-5 | pl-5 pr-5" style="height: 58px">
                             <a  href="${permalink}"
                                 target="_blank"
-                                title="${libdocMessages.openInANewTab[libdocConfig.lang]}"
+                                title="${libdocMessages.openInANewTab[lang]}"
                                 class="d-flex ai-center gap-1 | p-0 | fvs-wght-400 fs-2 tt-uppercase td-none | sandbox__permalink"
                                 fs-2="xs">
-                                <span class="fvs-wght-400">${libdocMessages.open[libdocConfig.lang]}</span>
+                                <span class="fvs-wght-400">${libdocMessages.open[lang]}</span>
                                 <span class="icon-arrow-square-out"></span>
                             </a>
                             <div class="d-flex gap-7">
                                 <button type="button"
                                     class="d-flex ai-center | p-0 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer | sandbox__reload">
-                                    <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.reload[libdocConfig.lang]}</span>
+                                    <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.reload[lang]}</span>
                                 </button>
                                 <button type="button"
                                     class="d-flex ai-center | p-0 | fvs-wght-400 fs-2 tt-uppercase | bc-0 b-0 cur-pointer | sandbox__copy_url">
-                                    <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.copyURL[libdocConfig.lang]}</span>
+                                    <span class="o-hidden | to-ellipsis ws-nowrap">${libdocMessages.copyURL[lang]}</span>
                                 </button>
                             </div>
                         </header>`;
-            return libdocUtils.templates.sandbox({iframeAttribute, iframeCommands, title, code, enableSwitchId});
+            return libdocUtils.templates.sandbox({iframeAttribute, iframeCommands, title, code, enableSwitchId, lang});
         }
     }
 }

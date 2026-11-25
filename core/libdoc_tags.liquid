@@ -40,9 +40,9 @@ date: false
                         fs-1="xs">
                         {{ tagCount }}
                         {% if tagCount == 1 %}
-                            {{ libdocMessages.page[libdocConfig.lang] |  downcase }}
+                            {{ libdocMessages.page[pageLang] |  downcase }}
                         {% else %}
-                            {{ libdocMessages.pages[libdocConfig.lang] | downcase }}
+                            {{ libdocMessages.pages[pageLang] | downcase }}
                         {% endif %}
                     </span>
                     <span class="pl-10 pr-10 pt-2 | brad-3 bwidth-1 bstyle-solid bcolor-primary-500"

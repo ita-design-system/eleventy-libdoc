@@ -53,7 +53,7 @@ permalink: "{{ libdocConfig.blogSlug }}/{% if pagination.pageNumber > 0 %}page-{
     <nav class="d-flex gap-2 fw-wrap | pl-10 pt-10 | blwidth-1 blstyle-dashed bcolor-neutral-500" pl-5="xs,sm">
         {% for pageEntry in pagination.pages %}
             <a  href="{{ pagination.hrefs[ forloop.index0 ] }}"
-                title="{{ libdocMessages.page[libdocConfig.lang] }} {{ forloop.index }}"
+                title="{{ libdocMessages.page[pageLang] }} {{ forloop.index }}"
                 class="d-flex | pos-relative | p-4 | td-none fs-3 fvs-wght-400 | brad-4 bc-neutral-100 bwidth-1 bstyle-dashed bcolor-neutral-500 __hover-1 __soft-shadow"
                 {% if page.url == pagination.hrefs[ forloop.index0 ] %}
                     aria-current="page"
